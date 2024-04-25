@@ -30,6 +30,7 @@
   outline: none;
   border: 1px solid #222;
   border-radius: 8px;
+  font-size: 18px;
 }
 .buttons {
   margin-top: 8px;
@@ -47,5 +48,7 @@
   border: 1px solid transparent;
   border-radius: 8px;
   cursor: pointer;
+  padding: 5px 0;
+  font-size: 18px;
 }
 /* ==== Main Section Design End ==== */
