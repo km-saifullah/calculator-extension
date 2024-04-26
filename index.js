@@ -21,6 +21,12 @@ const convertInput = (num1, num2) => {
   }
 };
 
+// clear input fields
+const clearFields = () => {
+  input1.value = "";
+  input2.value = "";
+};
+
 // buttons
 let addBtn = catchUiElements(".addBtn");
 let minusBtn = catchUiElements(".minusBtn");
@@ -30,14 +36,17 @@ let output = catchUiElements(".output");
 
 // mathematical operation
 let mathOperation = (number1, operator, number2) => {
-  if (operator == "+") {
-    return number1 + number2;
-  } else if (operator == "-") {
-    return number1 - number2;
-  } else if (operator == "*") {
-    return number1 * number2;
-  } else {
-    return number1 / number2;
+  switch (operator) {
+    case "+":
+      return number1 + number2;
+    case "-":
+      return number1 - number2;
+    case "*":
+      return number1 * number2;
+    case "/":
+      return number1 / number2;
+    default:
+      return "Invalid Input";
   }
 };
 
@@ -54,6 +63,7 @@ addBtn.addEventListener("click", () => {
     convertInput(input1, input2).number2
   );
   showOutput(add);
+  clearFields();
 });
 
 minusBtn.addEventListener("click", () => {
@@ -63,6 +73,7 @@ minusBtn.addEventListener("click", () => {
     convertInput(input1, input2).number2
   );
   showOutput(minus);
+  clearFields();
 });
 
 productBtn.addEventListener("click", () => {
@@ -72,6 +83,7 @@ productBtn.addEventListener("click", () => {
     convertInput(input1, input2).number2
   );
   showOutput(product.toFixed(2));
+  clearFields();
 });
 
 divisionBtn.addEventListener("click", () => {
@@ -81,4 +93,5 @@ divisionBtn.addEventListener("click", () => {
     convertInput(input1, input2).number2
   );
   showOutput(division.toFixed(2));
+  clearFields();
 });
