@@ -52,4 +52,6 @@ If you encounter any issues or have suggestions for improvement, please open an 
 
 [Khaled Md Saifullah](https://github.com/km-saifullah)
 
-## Demonstration Video
+## Installation Guide Video
+
+[![Youtube video](./googleChrome.png)](https://youtu.be/Y_q3zB4UxDA)
